@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Treble Clef Maint</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Treble Clef Bookstore Maintenance</h1>
+        <p>
+          <a href="{{ url_for('home')}}">Home</a> |
+          <a href="{{ url_for('read')}}">All books</a> |
+          <a href="{{ url_for('create')}}">Insert a book</a>
+        </p>
+      </header>
+      <main>{% block container %} {% endblock %}</main>
+      <footer>
+        <p>
+          Bookstore database is stored in Mongo
+
+      </footer>
+    </div>
+  </body>
+</html>

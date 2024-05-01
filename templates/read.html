@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block container %}
+<h2>Read</h2>
+<p>This page shows all the books in the Treble Clef Bookstore.</p>
+    {% for book in books %}
+    <div>
+        <hr class="solid">
+        <p>
+            {{book.title}}
+            <br>
+            <a href="{{ url_for('edit',mongoid=book._id)}}">Edit</a> | <a href="{{ url_for('delete',mongoid=book._id)}}">Delete</a>
+            <br>
+        </p>
+    </div>
+    {%endfor%}
+{% endblock %}-->
